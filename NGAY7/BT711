@@ -1,0 +1,9 @@
+#Bài 1: Nhập vào số a Tính tổng các số chẵn (s = 2 + 4 + 6 + ... cho đ
+# ến khi s > a)
+a=int(input("nhập vào số nguyên a : "))
+i=2
+s=0
+while s<=a:
+   s+=i
+   i+=2
+print("tổng là:",s)
