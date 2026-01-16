@@ -1,0 +1,11 @@
+import tkinter as tk
+window = tk.Tk()
+window.title("Place")
+window.geometry("350x500")
+label_heading = tk.Label(window, text = "Login app", font="Arial").pack()
+label1 = tk.Label(window, text = "Username: ").place(x = 5, y = 25)
+entry_username = tk.Entry(window).place(x = 80, y= 25)
+label2 = tk.Label(window, text = "Password:").place(x = 5, y = 65)
+entry_password = tk.Entry(window).place(x = 80, y= 65)
+btn_login = tk.Button(window, text="Login").place(x = 150, y = 100)
+window.mainloop()
