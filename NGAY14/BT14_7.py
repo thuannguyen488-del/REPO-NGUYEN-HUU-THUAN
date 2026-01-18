@@ -4,9 +4,7 @@
 #     ("An", 8.5),
 #     ("Bình", 7.0),
 #     ("Chi", 9.2)
-# )
 # 1.	In tên và điểm của từng học sinh.
-
 # 2.	Tìm học sinh có điểm cao nhất.
 students = (("An", 8.5),("Bình", 7.0),("Chi", 9.2))
 for ten,diem in students:

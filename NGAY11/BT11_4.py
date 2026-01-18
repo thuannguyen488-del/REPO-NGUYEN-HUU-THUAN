@@ -3,8 +3,8 @@
 #  Nếu là ký tự số hàm trả về true, ngược lại trả về false.
 def kiemtra(ch):
     if ch.isdigit():
-        return true
+        return "true"
     else:
-        return false
+        return "false"
 kt=input("nhập vào ký tự:")
 print("kết quả kiểm tra",kiemtra(kt))
