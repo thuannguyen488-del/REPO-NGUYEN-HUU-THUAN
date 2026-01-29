@@ -13,8 +13,3 @@ def is_prime(n) :
         if n % i == 0:
             return False
      return True
-a= int(input("nhập vào số a"))
-if is_prime(a):
-   print(f"số {a} là số nguyen to")
-else:
-   print(f"số {a} là số kong nguyen to")

@@ -69,4 +69,4 @@ while True:
         print("Thoát chương trình. Tạm biệt!")
         break
     else:
-        print("Lựa chọn không hợp lệ, vui lòng nhập từ 1-5.")
+        print("Lựa chọn không hợp lệ, vui lòng nhập từ 1-7.")

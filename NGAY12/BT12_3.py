@@ -15,7 +15,7 @@ if number_utils.is_even(a):
    print(f"số {a} là số chẵn")
 else:
    print(f"số {a} là số lẻ")
-   if number_utils.is_prime(a):
+if number_utils.is_prime(a):
       print(f"số {a} là số nguyên tố")
-   else:
+else:
       print(f"số {a} không phải là số nguyên tố")

@@ -5,4 +5,4 @@
 def my_pow(x):
    return x*x
 a=int(input("nhập vào số a:"))
-print("kết quả là:", my_pow())
+print("kết quả là:", my_pow(a))

@@ -45,7 +45,6 @@ def edit_friend():
         new_name = input("Nhập tên mới: ")
         new_diachi=input("Nhập địa chỉ mới: ")
         new_sdt=input("Nhập số điện thoai mới: ")
-        old_profile_friends = friends[index-1]
         friend= friends[index-1]
         if new_name:
             friend[0] = new_name

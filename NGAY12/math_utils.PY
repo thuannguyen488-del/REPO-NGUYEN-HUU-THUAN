@@ -12,15 +12,12 @@
 def add(a,b):
     tong=a+b
     print("tổng 2 số là:",tong)
-    
 def sub(a,b):
     tru=a-b
     print("hiệu 2 số là:",tru)
-
 def mul(a,b):
     nhan=a*b
     print("tích 2 số là:",nhan)
-
 def div(a,b):
     if b==0:
        print("không xác định")

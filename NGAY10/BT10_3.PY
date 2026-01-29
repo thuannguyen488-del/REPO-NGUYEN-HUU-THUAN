@@ -10,6 +10,6 @@ for i in range(1,so//2+1):
    if so%i==0:
       tong+=i
 if tong==so:
-    print("số đã cho là số hoàn hảo",tong)
+    print("số đã cho là số hoàn hảo")
 else:
-    print("số đã cho không phải là số hoàn hảo",tong)
+    print("số đã cho không phải là số hoàn hảo")
