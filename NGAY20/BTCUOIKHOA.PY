@@ -4,14 +4,12 @@
 # chức năng sau: 
 # Hiển thị menu tùy chọn
 # 1.Hiển thị danh sách : Hiển thị danh sách tất cả nhân viên đang lưu trữ
-# 2.Cho phép thêm mới bạn bè: Thực hiện thêm mới bạn bè vào danh sách
+# 2.Cho phép thêm mới bạn bè: Thực hiện thêm mới nhân viên vào danh sách
 # 3.Cho phép chỉnh sửa thông tin nhân viên:
 # 3.Cho phép xóa thông tin nhân viên:
 # 5.Lưu thông tin ra file
-# 6.thoát chương trình: cho phép xóa bạn bè ra khỏi danh sách
-# Chương trình quản lý bạn bè trên "Facebook"
-nhanvien = []  # danh sách bạn bè
-Profile_nhanvien = []  # danh sách bạn bè
+nhanvien = []  # danh sách 
+Profile_nhanvien = []  # Thông tin từng nhân viên
     #mở file lên và đọc lại danh sách để chuyển thành list
 with open("danh_sachnv.csv", mode="r", encoding="utf-8") as f:
     for i, line in enumerate(f, start=1):
