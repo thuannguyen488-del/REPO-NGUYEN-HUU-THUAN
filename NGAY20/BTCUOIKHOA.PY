@@ -56,8 +56,8 @@ def add_nv(ten_file="danh_sachnv.csv"):
         f.write(",".join(Profile_nhanvien) + "\n")
     listbox.delete(0, tk.END)  # Xóa nội dung cũ
     listbox.insert(tk.END, f"Đã ghi dữ liệu {TT1} vào file {ten_file}")
-    # print(f"Đã ghi dữ liệu vào file {ten_file}")
-    # print(f"Đã thêm thông tin {TT1} vào danh sách.")
+    clear()
+    TT12=entry_12.delete(0, tk.END)
 def edit_nhanvien(ten_file="danh_sachnv.csv"):
     show_danhsach()
     if not nhanvien:
@@ -84,7 +84,11 @@ def edit_nhanvien(ten_file="danh_sachnv.csv"):
         with open(ten_file, mode="w", encoding="utf-8") as f:
            for nv in nhanvien:
                f.write(",".join(nv) + "\n")
-        print(f"Đã đổi thông tin {TT1}.")
+        # print(f"Đã đổi thông tin {TT1}.")
+        listbox.delete(0, tk.END)  # Xóa nội dung cũ
+        listbox.insert(tk.END, f"Đã chỉnh sửa dữ liệu {TT1} vào file {ten_file}")
+        clear()
+        TT12=entry_12.delete(0, tk.END)
     else:
          print("Số thứ tự không hợp lệ.")
 
@@ -111,6 +115,9 @@ def xoa_nv(ten_file="danh_sachnv.csv"):
         with open(ten_file, mode="w", encoding="utf-8") as f:
             for nv in nhanvien:
                 f.write(",".join(nv) + "\n")
+        listbox.delete(0, tk.END)  # Xóa nội dung cũ
+        listbox.insert(tk.END, f"Đã Xóa dữ liệu {removed} từ file {ten_file}")
+        TT12=entry_12.delete(0, tk.END)
     else:
         print("Số thứ tự không hợp lệ.")
 # Tạo bảng làm việc
