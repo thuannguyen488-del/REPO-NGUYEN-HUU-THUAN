@@ -65,10 +65,11 @@ def edit_nhanvien(ten_file="danh_sachnv.csv"):
     try:
         index=int(entry_12.get().lower())
     except ValueError:
-        print("Vui lòng nhập số hợp lệ.")
+        listbox.delete(0, tk.END)  # Xóa nội dung cũ
+        listbox.insert(tk.END,"Vui lòng nhập số hợp lệ.")
+        messagebox.showinfo("Chú ý", "Vui lòng nhập số thứ tự nhân viên cần Chỉnh, Để trống ô thông tin nếu muốn giữ nguyên giá trị hiện tại.")
         return
     if 1 <= index <= len(nhanvien):
-        print("Để trống nếu muốn giữ nguyên giá trị hiện tại.")
         TT1=entry_1.get().lower()or nhanvien[index-1][0]
         TT2=entry_2.get().lower()or nhanvien[index-1][1]
         TT3=entry_3.get().lower()or nhanvien[index-1][2]
@@ -94,23 +95,20 @@ def edit_nhanvien(ten_file="danh_sachnv.csv"):
 
 def xoa_nv(ten_file="danh_sachnv.csv"):
     show_danhsach()
-    clear()
- #mở file lên và đọc lại danh sách để chuyển thành list
-    # with open(ten_file, mode="r", encoding="utf-8") as f:
-    #     for i, line in enumerate(f, start=1):
-    #         # loại bỏ ký tự xuống dòng và tách theo dấu phẩy
-    #         Profile_nhanvien = line.strip().split(",")
-    #         nhanvien.append(Profile_nhanvien)
+    listbox.delete(0, tk.END)  # Xóa nội dung cũ
+    listbox.insert(tk.END,"Vui lòng nhập số thứ tự nhân viên cần chỉnh.")
     if not nhanvien:
         return
     try:
+        index=int(entry_12.get().lower())
         index =int(entry_12.get().lower())
     except ValueError:
-        print("Vui lòng nhập số hợp lệ.")
+        listbox.delete(0, tk.END)  # Xóa nội dung cũ
+        listbox.insert(tk.END,"Vui lòng nhập số hợp lệ.")
+        messagebox.showinfo("Chú ý", "Vui lòng nhập số thứ tự nhân viên cần xóa theo DS:")
         return
     if 1 <= index <= len(nhanvien):
         removed = nhanvien.pop(index-1)
-        print(f"Đã xóa {removed} khỏi danh sách.")
                 # Ghi lại toàn bộ danh sách vào file
         with open(ten_file, mode="w", encoding="utf-8") as f:
             for nv in nhanvien:
@@ -126,10 +124,6 @@ from tkinter import messagebox
 window = tk.Tk()
 window.title("CHƯƠNG TRÌNH QUẢN LÝ NHÂN VIÊN ")
 window.geometry("700x400")
-# frame1 = tk.Frame(window, width=100, height=200, bg="lightgray", bd=5, relief="ridge")
-# frame1.pack(padx=5, pady=5, fill="both", expand=True)
-# frame2 = tk.Frame(window, width=50, bg="lightgray", bd=5, relief="ridge")
-# frame2.pack(padx=5, pady=5, fill="both", expand=True)
 label_1 = tk.Label(window, text="Tên:", font=("Arial", 10))
 label_1.place(x=10,y=20)
 entry_1=tk.Entry(window)
@@ -175,7 +169,7 @@ label_11 = tk.Label(window, text="Mã nhân viên:", font=("Arial", 10))
 label_11.place(x=300,y=170)
 entry_11=tk.Entry(window)
 entry_11.place(x=450,y=170)
-label_12 = tk.Label(window, text="Số thứ tự theo DS:", font=("Arial", 10))
+label_12 = tk.Label(window, text="Số thứ tự theo DS:", font=("Arial", 10), fg="red")
 label_12.place(x=10,y=170)
 entry_12=tk.Entry(window)
 entry_12.place(x=150,y=170)
